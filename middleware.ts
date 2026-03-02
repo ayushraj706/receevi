@@ -8,12 +8,10 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * Feel free to modify this pattern to include more paths.
+     * Match all request paths except for:
+     * - api/webhook (ISSE EXCLUDE KIYA HAI TAKI META CONNECT HO SAKE)
+     * - _next/static, _next/image, favicon.ico, etc.
      */
-    '/((?!_next/static|_next/image|favicon.ico|assets/email-templates|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api/webhook|_next/static|_next/image|favicon.ico|assets/email-templates|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 }
